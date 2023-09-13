@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cabral I</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-3-amb-living">
+        <li class="text">3 amb. Living</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-3-amb-toilette-pb">
+        <li class="text">3 amb. Toilette pb</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-3-amb-livingcombao-pb">
+        <li class="text">3 amb. Living/Com/Baño PB</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-3-amb-ingreso">
+        <li class="text">3 amb. Ingreso</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-3-amb-cocina">
+        <li class="text">3 amb. Cocina</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-3-amb-habitacion-frente">
+        <li class="text">3 amb. Habitacion frente</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-3-amb-bao">
+        <li class="text">3 amb. Baño</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-3-amb-habitacin-trasera">
+        <li class="text">3 amb. Habitación trasera</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-3-amb-escalera-1er-piso">
+        <li class="text">3 amb. escalera 1er piso</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-3-amb-pasillobao-1er-piso">
+        <li class="text">3 amb. Pasillo/baño 1er piso</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-monoambiente-living">
+        <li class="text">Monoambiente Living</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-monoambiente-cocina">
+        <li class="text">Monoambiente Cocina</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-hallpasillo">
+        <li class="text">Hall/Pasillo</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-hall-ing-2-ambientes">
+        <li class="text">Hall ing. 2 Ambientes</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-2-ambientes-living">
+        <li class="text">2 ambientes Living</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-2-ambientes-cocina">
+        <li class="text">2 ambientes cocina</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-2-ambientes-pasillobaohabit">
+        <li class="text">2 ambientes pasillo/baño/habit</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-2-ambientes-habitacion">
+        <li class="text">2 ambientes habitacion</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-2-ambientes-bao">
+        <li class="text">2 ambientes baño</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-monoambiente-bao">
+        <li class="text">Monoambiente baño</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
